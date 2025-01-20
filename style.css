@@ -50,14 +50,14 @@
 body {
     display:grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 100%;
+    grid-template-rows: 100vh;
 }
 
 .sidebar {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: max(100px, 20%) max(400px,40%) max(300px,30%);
-    gap: 50px;
+    grid-template-rows: max(100px, 1fr) max(400px,2fr) max(300px,1.5fr);
+    gap: 20px;
 }
 
 .subside {
@@ -68,7 +68,8 @@ body {
 
 .sidebaritem {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
 }
 
 .main {
@@ -78,7 +79,26 @@ body {
 }
 
 .icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.list {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.icon > img {
     width: 30px;
+}
+
+.large {
+    font-size: 2rem;
+}
+.large > img {
+    width: 50px;
 }
 
 * {
