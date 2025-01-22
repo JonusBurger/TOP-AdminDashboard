@@ -117,6 +117,11 @@ body {
     gap: 20px;
 }
 
+.icon-user {
+    display: flex;
+    justify-content: end;
+}
+
 .maincols {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -222,6 +227,11 @@ body {
 .small > img {
     width: 20px;
 }
+
+#searchbar {
+    width: 500;
+}
+
 .maincols {
     background-color: #e0dfdc;
     padding: 40px 20px;
@@ -241,7 +251,7 @@ body {
     font-size: 0.8rem;
 }
 
-.icon > .roundimage {
+img.roundimage {
     border-radius: 50%;
     height: 40px;
     width: 40px;
