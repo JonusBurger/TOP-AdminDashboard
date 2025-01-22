@@ -46,6 +46,10 @@
     isolation: isolate;
     }
 
+:root {
+    --secondary-text-color: gray;
+}
+
 @font-face {
     font-family: 'Roboto';
     src: url('fonts/Roboto-VariableFont_wdth\,wght.ttf') format('truetype'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -163,6 +167,7 @@ body {
 .announcment {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
 }
 
 .trending {
@@ -174,6 +179,18 @@ body {
 .users {
     display: grid;
     grid-template-columns: 50px 1fr;
+}
+
+.users > .icon {
+    display: flex;
+    align-items: center;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
 }
 
 body {
@@ -217,7 +234,21 @@ body {
 }
 
 .card > p {
-    color: gray;
+    color: var(--secondary-text-color);
+}
+
+.address, .announcment {
+    font-size: 0.8rem;
+}
+
+.icon > .roundimage {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.address > p {
+    color: var(--secondary-text-color);
 }
 
 .announcment, .trending {
@@ -226,6 +257,9 @@ body {
     padding: 5px;
 }
 
+.announcment {
+    padding: 30px 20px;
+}
 /* {
     border: solid black 1px;
 }
