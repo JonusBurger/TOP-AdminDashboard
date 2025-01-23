@@ -229,7 +229,9 @@ body {
 }
 
 #searchbar {
-    width: 500;
+    width: 500px;
+    border-radius: 5px;
+    background-color: var(--secondary-text-color);
 }
 
 .maincols {
