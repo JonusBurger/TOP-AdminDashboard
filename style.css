@@ -58,7 +58,7 @@
 
 body {
     display:grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 6fr;
     grid-template-rows: 100vh;
 }
 
@@ -84,7 +84,7 @@ body {
 .main {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 7fr;
 }
 
 .icon {
@@ -113,6 +113,11 @@ body {
     gap: 10px;
 }
 
+.topbar p {
+    display: flex;
+    align-items: center;
+}
+
 .formdiv {
     display: flex;
     align-items: center;
@@ -122,6 +127,11 @@ body {
     display: grid;
     grid-template-columns: 80px 1fr repeat(3, 150px);
     gap: 20px;
+}
+
+div.bottombar > div {
+    display: flex;
+    align-items: center;
 }
 
 .icon-user {
@@ -141,8 +151,9 @@ body {
 
 .maincards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 40px repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: 40px;
+    grid-auto-rows: 1fr;
     grid-area: a;
     gap: 30px;
 }
@@ -154,7 +165,7 @@ body {
 }
 
 .cardheader {
-    grid-column-end: span 2;
+    grid-column: 1/ -1;
 }
 
 .maincards + .sidecards {
@@ -178,8 +189,8 @@ body {
 
 .announcment {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-rows: 1fr, 1px, 1fr, 1px, 1fr;
+    gap: 5px;
 }
 
 .trending {
@@ -220,16 +231,25 @@ body {
     width: 30px;
 }
 
-.sidebar > .icon > img {
+.icon {
     filter:invert(1);
+}
+
+.icon.small {
+    filter:invert(0)
 }
 
 .large {
     font-size: 1.5rem;
 }
+
 .large > img.roundimage {
     width: 60px;
     height: 60px;
+}
+
+.icon.large > img {
+    width: 60px;
 }
 
 .bolt {
@@ -240,8 +260,12 @@ body {
     width: 20px;
 }
 
+form {
+    width: 700px;
+}
+
 #searchbar {
-    width: 500px;
+    width: 100%;
     border-radius: 20px;
     border-color: var(--background-color);
     box-shadow: none;
@@ -272,7 +296,7 @@ button {
 }
 
 .address, .announcment {
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 img.roundimage {
@@ -281,8 +305,17 @@ img.roundimage {
     width: 40px;
 }
 
+.users > .icon {
+    filter: none;
+}
+
 .address > p {
     color: var(--secondary-text-color);
+}
+
+.line {
+    height: 1px;
+    background: var(--secondary-text-color);
 }
 
 .announcment, .trending {
